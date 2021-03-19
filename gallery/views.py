@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 
 # Create your views here.
-def welcome(request):
-    return HttpResponse('Welcome to Galleria')
+
+
+def home(request):
+    return HttpResponse('<h1>Welcome to Galleria</h1>')
