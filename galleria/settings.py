@@ -77,8 +77,10 @@ WSGI_APPLICATION = 'galleria.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gallerya',
+        'USER': 'tom',
+        'PASSWORD': 'y6t5r4e3w2q1',
     }
 }
 
@@ -120,3 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+TIME_ZONE = 'Africa/Nairobi'

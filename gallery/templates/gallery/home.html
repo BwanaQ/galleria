@@ -1,6 +1,9 @@
 {% extends 'gallery/base.html'%}
 {% block content%}
     <h1>Gallerya Home</h1>
+    {% for image in images %}
+      <p>{{image.name}}</p>
+    {% endfor %}
   {% endblock %}  
   </body>
 </html>
