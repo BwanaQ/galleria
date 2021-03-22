@@ -1,0 +1,26 @@
+{% extends 'gallery/base.html'} %} {% block content %}
+<div class="background">
+  <div class="card" style="width: 18rem">
+    <img
+      src="{{ image.image_url.url }}"
+      class="card-img-top"
+      alt="{{ image.name }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ image.name }}</h5>
+      <p class="card-text">
+        <strong>Added by: </strong>{{image.user.username}}
+      </p>
+      <p class="card-text">
+        <strong>Location: </strong>{{image.user.username}}
+      </p>
+      <p class="card-text">
+        <strong>Category: </strong>{{image.user.username}}
+      </p>
+      <p class="card-text"><strong>Created on: </strong>{{image.timestamp}}</p>
+
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

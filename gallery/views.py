@@ -1,31 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import Location, Category, Image
 
 # Create your views here.
-images = [
-    {
-        'image_url': '#',
-        'name': 'Test Image',
-        'description': 'Testing description',
-        'location': 'Kitui',
-        'category': 'excursion'
-    },
-    {
-        'image_url': '#',
-        'name': 'Test Image',
-        'description': 'Testing description',
-        'location': 'Kitui',
-        'category': 'excursion'
-    },
-    {
-        'image_url': '#',
-        'name': 'Test Image',
-        'description': 'Testing description',
-        'location': 'Kitui',
-        'category': 'excursion'
-    },
-]
 
 
 def home(request):
@@ -37,3 +14,11 @@ def home(request):
 
 def about(request):
     return render(request, 'gallery/about')
+
+
+def image(request, image_id):
+    try:
+        image = Image.objects.get(id=article_id)
+    except DoesNotExist:
+        raise Http404()
+    return(request, 'gallery/image.html', {'image': image})

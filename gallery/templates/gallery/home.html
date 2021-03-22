@@ -1,9 +1,14 @@
-{% extends 'gallery/base.html'%}
-{% block content%}
-    <h1>Gallerya Home</h1>
-    {% for image in images %}
-      <p>{{image.name}}</p>
+{% extends 'gallery/base.html'%} {% block content%}
+<div id="background">
+  <div id="gallery">
+    {% load random_numbers %} {% for image in images %}
+    <figure class="pic{% random_int 1 25 %}">
+      <img src="{{ image.image_url.url }}" alt="{{ image.name }}" />
+      <figcaption class="marker">
+        {{ image.name }} by {{image.author.username}}
+      </figcaption>
+    </figure>
     {% endfor %}
-  {% endblock %}  
-  </body>
-</html>
+  </div>
+</div>
+{% endblock %}
