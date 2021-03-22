@@ -1,14 +1,29 @@
 {% extends 'gallery/base.html'%} {% block content%}
 <div id="background">
-  <div id="gallery">
-    {% load random_numbers %} {% for image in images %}
-    <figure class="pic{% random_int 1 25 %}">
-      <img src="{{ image.image_url.url }}" alt="{{ image.name }}" />
-      <figcaption class="marker">
-        {{ image.name }} by {{image.author.username}}
-      </figcaption>
-    </figure>
-    {% endfor %}
+  <div class="row text-center">
+    <div class="col">
+      <div class="locations">
+        <h2 class="text-light">Locations</h2>
+        {% for location in locations %}
+
+        <span class="badge bg-light text-dark mr-2">
+          <a href="/location/{{location.name}}">{{location.name}}</a>
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="gallery">
+        {% load random_numbers %} {% for image in images %}
+        <figure class="pic{% random_int 1 11 %}">
+          <img src="{{ image.image_url.url }}" alt="{{ image.name }}" />
+          <figcaption class="marker">{{ image.name }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
