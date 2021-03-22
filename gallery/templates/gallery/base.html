@@ -34,7 +34,7 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Gallerya</a>
-        <form class="d-flex">
+        <form class="d-flex" action="/search">
           <input
             class="form-control me-2"
             type="search"
@@ -45,9 +45,7 @@
         </form>
       </div>
     </nav>
-    {%if messages %} {% for message in messages %}
-    <div class="alert alert-{{message.tags}}">{{ message }}</div>
-    {% endfor %} {% endif %} {% block content %}
+    {% block content %}
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

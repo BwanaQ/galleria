@@ -25,15 +25,15 @@ def image_category(request, category):
 
 
 def search_image(request):
-    if 'imagesearch' in request.GET and request.GET['imagesearch']:
-        category = request.GET.get('imagesearch')
-        searched_images = Image.search_by_category(category)
-        message = f'{category}'
-        return render(request, 'search_image.html', {'message': message, "image": searched_images})
+    if 'image' in request.GET and request.GET['image']:
+        search_term = request.GET.get('image')
+        searched_images = Image.search_by_category(search_term)
+        message = f'{search_term}'
+        return render(request, 'gallery/search_image.html', {'message': message, "images": searched_images})
 
     else:
         message = "No images found"
-        return render(request, 'search_image.html', {'messages': message})
+        return render(request, 'gallery/search_image.html', {'messages': message})
 
 
 def about(request):
@@ -42,7 +42,7 @@ def about(request):
 
 def image(request, image_id):
     try:
-        image = Image.objects.get(id=article_id)
+        image = Image.objects.get(id=image_id)
     except DoesNotExist:
         raise Http404()
     return(request, 'gallery/image.html', {'image': image})
