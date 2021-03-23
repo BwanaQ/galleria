@@ -13,7 +13,7 @@
         {% endfor %}
       </div>
       {% else %}
-      <a href="/" class="btn btn-secondary">Go Home</a>
+      <a href="/" class="btn btn-secondary"> &#60;&#60;Back Home </a>
       {% endif %}
     </div>
   </div>
@@ -28,11 +28,7 @@
         >
           <img src="{{ image.image_url.url }}" alt="{{ image.name }}" />
           <figcaption class="marker">{{ image.name }}</figcaption>
-          <small
-            ><a href="images/{{image.id}}" class="btn btn-secondary"
-              >View Details</a
-            ></small
-          >
+          <small><a href="#" class="btn btn-secondary">View Details</a></small>
         </figure>
         {% endfor %}
       </div>
