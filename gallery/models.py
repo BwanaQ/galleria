@@ -36,6 +36,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
+        verbose_name_plural = "cities"
         return self.name
 
     class Meta:
