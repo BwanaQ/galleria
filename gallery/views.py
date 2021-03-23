@@ -16,28 +16,24 @@ def home(request):
 
 def image_location(request, location):
     images = Image.filter_by_location(location)
-    return render(request, 'location.html', {'location_images': images})
+    return render(request, 'gallery/home.html', {'images': images})
 
 
 def image_category(request, category):
     images = Image.filter_by_category(category)
-    return render(request, 'category.html', {'category_images': images})
+    return render(request, 'gallery/home.html', {'images': images})
 
 
 def search_image(request):
     if 'image' in request.GET and request.GET['image']:
         search_term = request.GET.get('image')
-        searched_images = Image.search_by_category(search_term)
+        images = Image.search_by_category(search_term)
         message = f'{search_term}'
-        return render(request, 'gallery/search_image.html', {'message': message, "images": searched_images})
+        return render(request, 'gallery/home.html', {'message': message, "images": images})
 
     else:
         message = "No images found"
         return render(request, 'gallery/search_image.html', {'messages': message})
-
-
-def about(request):
-    return render(request, 'gallery/about')
 
 
 def image(request, image_id):

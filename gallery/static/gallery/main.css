@@ -14,8 +14,7 @@ div#background {
 }
 
 div#gallery {
-  width: 800px;
-  margin: auto;
+  margin: 0px;
 }
 
 #background img {
