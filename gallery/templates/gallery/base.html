@@ -46,25 +46,11 @@
       </div>
     </nav>
     {% block content %}
-    <div class="container-fluid" id="background">
-      <div class="row text-center">
-        <div class="col">
-          <div class="locations">
-            <h2 class="text-light">Locations</h2>
-            {% for location in locations %}
 
-            <span class="badge bg-light text-dark mr-2">
-              <a href="/location/{{location.name}}">{{location.name}}</a>
-            </span>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Optional JavaScript; choose one of the two! -->
 
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      {% endblock %}
-    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    {% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
