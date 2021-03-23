@@ -24,31 +24,31 @@ $ git clone https://github.com/BwanaQ/galleria.git
 $ cd galleria
 ```
 
-1. Add a python 3 environment
+2. Add a python 3 environment
 
 ```
 $ virtualenv env
 ```
 
-1. Enter the virtual environment
+3. Enter the virtual environment
 
 ```
 $ source env/bin/activate
 ```
 
-1. Install dependanies from requirements.txt
+4. Install dependanies from requirements.txt
 
 ```
 (env)$ pip install -r requirements.txt
 ```
 
-1. rename .env copy to .env then run this command
+5. rename .env copy to .env then run this command
 
 ```
 (env) $ source .env
 ```
 
-1. Run server
+6. Run server
 
 ```
 (env) $ python manage.py runserver
