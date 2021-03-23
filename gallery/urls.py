@@ -7,5 +7,5 @@ urlpatterns = [
          name='gallery-image-location'),
     path('category/<str:category>', views.image_category,
          name='gallery-image-category'),
-    path('search/', views.search_image, name='gallery-search')
+    path('search/', views.search_images, name='gallery-search')
 ]

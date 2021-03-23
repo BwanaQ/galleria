@@ -24,12 +24,12 @@ def image_category(request, category):
     return render(request, 'gallery/home.html', {'images': images})
 
 
-def search_image(request):
+def search_images(request):
     if 'image' in request.GET and request.GET['image']:
         search_term = request.GET.get('image')
-        images = Image.search_by_category(search_term)
+        searched_images = Image.search_by_category(search_term)
         message = f'{search_term}'
-        return render(request, 'gallery/home.html', {'message': message, "images": images})
+        return render(request, 'gallery/search_image.html', {'message': message, "images": searched_images})
 
     else:
         message = "No images found"
