@@ -1,60 +1,62 @@
 # GALLERYA
 
-One Paragraph of project description goes here
+A Gallery app built on Django with a robust backend for adding photos, a search function and sorts images by categories
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+- clone this repo
+
+```
+$ git clone https://github.com/BwanaQ/galleria.git
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+- Python 3 latest version
+- Pip3 installer
+- virtualenv command
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+1. cd into the galleria folder
 
 ```
-Give the example
+$ cd galleria
 ```
 
-And repeat
+1. Add a python 3 environment
 
 ```
-until finished
+$ virtualenv env
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+1. Enter the virtual environment
 
 ```
-Give an example
+$ source env/bin/activate
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+1. Install dependanies from requirements.txt
 
 ```
-Give an example
+(env)$ pip install -r requirements.txt
+```
+
+1. rename .env copy to .env then run this command
+
+```
+(env) $ source .env
+```
+
+1. Run server
+
+```
+(env) $ python manage.py runserver
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+to deploy to heroku simply create a project, attach your git hub repository and
 
 ## Built With
 
